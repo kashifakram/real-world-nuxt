@@ -48,6 +48,9 @@ export default {
       });
     }
   },
+  computed: mapState({
+    event: (state) => state.events.event
+  }),
   head() {
     return {
       title: this.event.title,
@@ -59,10 +62,7 @@ export default {
         }
       ]
     };
-  },
-  computed: mapState({
-    event: (state) => state.events.event
-  })
+  }
 };
 </script>
 
